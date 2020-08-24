@@ -1,6 +1,21 @@
 #include <iostream>
 #include <assert.h>
+#include <map>
 #include "namespace.h"
+
+void ToString()
+{   std::map<int, std::string> reference;
+    int majorcolorindex = 0; int minorcolorindex = 0;
+    std::string colors = "";
+    for(int i = 0; i<25 ; i++)
+    {   minorcolorindex = (i%TelCoColorCoder::numberOfMinorColors);
+        majorcolorindex = (i/TelCoColorCoder::numberOfMajorColors);
+        std::cout << i <<"\t" << majorcolorindex <<" "<< minorcolorindex << std::endl;
+        colors =  (std::string)(TelCoColorCoder::MajorColorNames[majorcolorindex])+" "+                  
+                  (std::string)(TelCoColorCoder::MinorColorNames[minorcolorindex]);
+        reference.insert(std::pair<int, std::string>(i+1, colors));
+    }
+}
 
 void testNumberToPair(int pairNumber,
     TelCoColorCoder::MajorColor expectedMajor,
