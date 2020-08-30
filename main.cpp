@@ -1,5 +1,6 @@
 #include <iostream>
 #include <assert.h>
+#Include <string>
 #include "namespace.h"
 #include "namespace2.h"
 
@@ -9,7 +10,7 @@ void ToString()
     for(int i = 0; i<25 ; i++)
     {   minorcolorindex = (i%TelCoColorCoder::numberOfMinorColors);
         majorcolorindex = (i/TelCoColorCoder::numberOfMajorColors);
-        colors +=  (std::string)(i)+" "+(std::string)(TelCoColorCoder::MajorColorNames[majorcolorindex])+" "+                  
+        colors +=  (std::to_string)(i)+" "+(std::string)(TelCoColorCoder::MajorColorNames[majorcolorindex])+" "+                  
                   (std::string)(TelCoColorCoder::MinorColorNames[minorcolorindex])+"\n";
     }
     std::cout << colors << std::endl;
