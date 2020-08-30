@@ -9,7 +9,7 @@ void ToString()
     for(int i = 0; i<25 ; i++)
     {   minorcolorindex = (i%TelCoColorCoder::numberOfMinorColors);
         majorcolorindex = (i/TelCoColorCoder::numberOfMajorColors);
-        colors =  (std::string)(TelCoColorCoder::MajorColorNames[majorcolorindex])+" "+                  
+        colors +=  (std::string)(i)+" "+(std::string)(TelCoColorCoder::MajorColorNames[majorcolorindex])+" "+                  
                   (std::string)(TelCoColorCoder::MinorColorNames[minorcolorindex])+"\n";
     }
     std::cout << colors << std::endl;
