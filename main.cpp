@@ -2,7 +2,7 @@
 #include <assert.h>
 #include <map>
 #include "namespace.h"
-
+#include "namespace2.h"
 void ToString()
 {   std::map<int, std::string> reference;
     int majorcolorindex = 0; int minorcolorindex = 0;
